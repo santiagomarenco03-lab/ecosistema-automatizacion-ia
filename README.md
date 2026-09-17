@@ -44,7 +44,8 @@ Trigger → Filtro (Aprobado = true AND Estado = Aprobado) → Slack (publica) �
 - **Dashboard de control (público, solo lectura)** — https://airtable.com/appBa2raukxsIWANq/shrPPtVYEWWOrAUYq  
   Vista agrupada por estado con tasa de errores y tasa de publicación calculadas.
 
----
+---- **Video demo (3 min)** — https://drive.google.com/file/d/1tWHEe-3C2CHUDl2ORE-epWVWL6L3PfZO/view?usp=sharing
+  Recorrido por el trigger, el orquestador, el punto de validación humana y la salida final.
 
 ## Contenido del repositorio
 
