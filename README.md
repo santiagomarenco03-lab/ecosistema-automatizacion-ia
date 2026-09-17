@@ -1,6 +1,6 @@
 # Ecosistema de Automatización IA — Pipeline de Contenido con Control de Calidad Humano
 
-**Proyecto Final · IA & Automatización · Coderhouse**
+**Proyecto Final · IA & Automatización · Coderhouse**  
 Santiago Marenco
 
 ---
@@ -31,9 +31,9 @@ Trigger → Filtro → Clasificador IA → Parse JSON → ROUTER
                                                     ├── confianza ≥ 0,7 → RAG → Redactor IA → Airtable → Slack (aviso)
                                                     │                             └── on error → Errores + Resume
                                                     └── confianza < 0,7 → Datos incompletos → Errores
-                                                    
+
                           ⏸  PUNTO HITL — el humano tilda «Aprobado»
-                          
+
 Trigger → Filtro (Aprobado = true AND Estado = Aprobado) → Slack (publica) → Estado = Publicado
 ```
 
@@ -41,18 +41,27 @@ Trigger → Filtro (Aprobado = true AND Estado = Aprobado) → Slack (publica) �
 
 ## Enlaces
 
-- **Dashboard de control (público, solo lectura)** — https://airtable.com/appBa2raukxsIWANq/shrPPtVYEWWOrAUYq
+- **Dashboard de control (público, solo lectura)** — https://airtable.com/appBa2raukxsIWANq/shrPPtVYEWWOrAUYq  
   Vista agrupada por estado con tasa de errores y tasa de publicación calculadas.
 
 ---
 
 ## Contenido del repositorio
 
-| Archivo / carpeta | Qué contiene |
+| Archivo | Qué contiene |
 |---|---|
 | `Proyecto_Final_Ecosistema_IA.pdf` | Documento principal con los cinco entregables |
-| `blueprints/` | Los dos escenarios de Make exportados en `.json` |
-| `evidencias/` | Capturas de los lienzos, las corridas, las tablas y el dashboard |
+| `FINAL-A - Generacion de contenido.json` | Blueprint del escenario A de Make |
+| `FINAL-B - Publicacion.json` | Blueprint del escenario B de Make |
+| `01-diagrama-arquitectura.png` | Diagrama de arquitectura del ecosistema |
+| `02-escenario-A-make.png` | Lienzo del escenario A con la rama de error activa |
+| `03-escenario-B-make.png` | Lienzo del escenario B con el filtro de aprobación |
+| `04-modelo-relacional-airtable.png` | Relaciones entre las cuatro tablas |
+| `05-tabla-contenido-estados.png` | Estado del sistema tras el test de estrés |
+| `06-tabla-errores.png` | Las dos rutas de error registradas |
+| `07-router-operador-numerico.png` | Comparación de tipos correcta en el router |
+| `08-dashboard-control.png` | Dashboard con la tasa de errores por estado |
+| `09-salida-slack-publicado.png` | Salida final en el canal de distribución |
 
 Los blueprints no contienen credenciales: Make referencia las conexiones por identificador numérico.
 
